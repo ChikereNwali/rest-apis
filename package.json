@@ -1,0 +1,36 @@
+{
+  "name": "node-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint src",
+    "test": "mocha || true"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "express-routes-versioning": "^1.0.1",
+    "joi": "^13.4.0",
+    "nodemon": "^1.18.2",
+    "pug": "^2.0.3"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.6",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "chai": "^4.1.2",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^17.0.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.9.1",
+    "expect": "^1.20.2",
+    "istanbul": "^0.4.5",
+    "mocha": "^5.2.0",
+    "supertest": "^3.1.0"
+  }
+}
