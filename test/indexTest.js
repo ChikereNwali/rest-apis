@@ -30,9 +30,9 @@ describe('API Endpoints', function() {
 
 
 	//POST : Returns error message
-	describe('## Create task ', function() {
-		it('should return error message (400):Bad request', function(done) {
-			request(index) .post('/api/v1/entries') .send(entry) .end(function(err, res) {
+	describe('## Create task ', () => {
+		it('should return error message (400):Bad request', (done) =>{
+			request(index) .post('/api/v1/entries') .send(entry) .end((err, res) =>{
 				expect(res.statusCode).to.equal(400);
 				entry != res.body;
 				done();
@@ -40,9 +40,9 @@ describe('API Endpoints', function() {
 		});
 
 		//POST : creates an entry
-		it('should create an entry if the entries are valid', function(done) {
-			request(index) .post('/api/v1/entries') .send(entry) .end(function(err, res) {
-				expect(res.body).to.deep.equal(entry);
+		it('should create an entry if the entries are valid', (done)=> {
+			request(index) .post('/api/v1/entries') .send(entry) .end( (err, res) => {
+				expect(res.body[0]).to.deep.equal(entry);
 				expect(res.body).to.be.a('object');
 				expect(res.body).to.have.property('id');
 				expect(res.body).to.have.property('title');
@@ -63,10 +63,10 @@ describe('API Endpoints', function() {
 	});
 
 	//GET: fetches a single entry
-	describe('GET an entry by ID', function() {
+	describe('GET an entry by ID', () => {
 
-		it('should return 404 if an entry is not found', function(done) {
-			request(index) .get('/api/v1/entries' + entry.id) .end(function(err, res) {
+		it('should return 404 if an entry is not found', (done)=> {
+			request(index) .get('/api/v1/entries' + entry.id) .end( (err, res) => {
 				expect(res.statusCode).to.equal(404);
 				done();
 			});
