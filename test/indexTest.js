@@ -105,7 +105,7 @@ describe('API Endpoints', ()=>{
 	});
 
 
-	//PUT -modifies an entry
+	//PUT -modifies an entry.
 	describe('PUT - modifies an entry',()=>{
 		it('should return 404 if entry is not found',(done) =>{
 			request(index).put('/api/v1/entries' + entry.id).end((err,res)=>{
