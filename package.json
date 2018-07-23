@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "babel-node index.js",
     "lint": "eslint src",
     "coveralls": "nyc report --reporter=text-lcov | coveralls && nyc report --reporter=lcov",
     "test": "nyc --reporter=html --reporter=text mocha test/ --exit --compilers js:babel-core/register"
