@@ -5,8 +5,3 @@ node_js:
 cache:
   directories:
     - "node_modules"
-  
-=======
-  - "iojs"
-  - "7"
->>>>>>> 8751c10b87d74c04bde0d79f66adc671b127fe9a
